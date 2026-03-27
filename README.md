@@ -1,16 +1,24 @@
 # StoryForge
 
-StoryForge is a Python random story generator.
-
-It creates short story ideas by combining genres,
-characters, settings, and plot twists.
+StoryForge is a Python program that generates random stories and poems.
 
 ## Features
 
-- Random story generation
-- Multiple genres
-- Creative writing inspiration
+- Story generator
+- Poetry generator
+- Genre selection
+- Save generated texts
 
-## Run the project
+## How to run
+
+Clone the repository:
+
+git clone https://github.com/yourusername/storyforge
+
+Go to the folder:
+
+cd storyforge
+
+Run the program:
 
 python3 storyforge.py
