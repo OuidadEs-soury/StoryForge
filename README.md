@@ -1,24 +1,14 @@
-# StoryForge
+# StoryForge Pro
 
-StoryForge is a Python program that generates random stories and poems.
+StoryForge Pro is a Python creative writing generator.
 
-## Features
+It can generate:
 
-- Story generator
-- Poetry generator
-- Genre selection
-- Save generated texts
+- Stories
+- Poems
+- Characters
+- Fantasy Worlds
 
-## How to run
-
-Clone the repository:
-
-git clone https://github.com/yourusername/storyforge
-
-Go to the folder:
-
-cd storyforge
-
-Run the program:
+## Run the program
 
 python3 storyforge.py

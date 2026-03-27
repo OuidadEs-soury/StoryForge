@@ -14,7 +14,6 @@ characters = [
     "a curious scientist",
     "a lonely astronaut",
     "a fearless explorer",
-    "a forgotten warrior",
     "a wandering poet"
 ]
 
@@ -32,8 +31,7 @@ conflicts = [
     "discovers a dangerous secret",
     "is trapped in a deadly game",
     "finds an artifact with strange powers",
-    "must choose between loyalty and freedom",
-    "uncovers a hidden truth about their world"
+    "must choose between loyalty and freedom"
 ]
 
 plot_twists = [
@@ -51,4 +49,37 @@ poem_lines = [
     "Time moves like a quiet river",
     "Shadows dance with the fading light",
     "Hope rises like the morning sun"
+]
+
+character_roles = [
+    "warrior",
+    "mage",
+    "explorer",
+    "scientist",
+    "detective",
+    "thief"
+]
+
+traits = [
+    "brave",
+    "cunning",
+    "mysterious",
+    "loyal",
+    "reckless",
+    "wise"
+]
+
+world_types = [
+    "a floating island world",
+    "a cyberpunk megacity",
+    "a magical forest civilization",
+    "a desert empire",
+    "an ocean planet"
+]
+
+world_events = [
+    "a rising dark power",
+    "an ancient prophecy awakening",
+    "a lost technology returning",
+    "a mysterious cosmic signal"
 ]

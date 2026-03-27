@@ -1,17 +1,19 @@
 from story_engine import generate_story, generate_poem
+from generators import generate_character, generate_world
 from file_manager import save_to_file
 from data import genres
+import random
 
 
-def show_banner():
+def banner():
 
     print("""
-====================================
-            STORYFORGE
-      Story & Poetry Generator
-====================================
+========================================
+            STORYFORGE PRO
+      Story & Fantasy Generator
+========================================
 Author: Ouidad Es-Soury
-------------------------------------
+----------------------------------------
 """)
 
 
@@ -19,16 +21,15 @@ def choose_genre():
 
     print("\nChoose a genre:\n")
 
-    for index, genre in enumerate(genres):
-        print(f"{index + 1} - {genre}")
+    for i, g in enumerate(genres):
+        print(f"{i+1} - {g}")
 
     choice = input("\nSelect genre number: ")
 
     try:
-        return genres[int(choice) - 1]
+        return genres[int(choice)-1]
     except:
-        print("Invalid choice. Using random genre.")
-        import random
+        print("Invalid choice. Random genre selected.")
         return random.choice(genres)
 
 
@@ -38,40 +39,36 @@ def menu():
 
         print("""
 
-Choose an option:
+Choose an option
 
 1 - Generate Story
 2 - Generate Poem
-3 - Exit
+3 - Generate Character
+4 - Generate Fantasy World
+5 - Exit
 
 """)
 
-        choice = input("Select option: ")
+        option = input("Select option: ")
 
-        if choice == "1":
+        if option == "1":
 
             genre = choose_genre()
-            story = generate_story(genre)
+            result = generate_story(genre)
 
-            print(story)
+        elif option == "2":
 
-            save = input("Save this story? (y/n): ")
+            result = generate_poem()
 
-            if save.lower() == "y":
-                save_to_file(story)
+        elif option == "3":
 
-        elif choice == "2":
+            result = generate_character()
 
-            poem = generate_poem()
+        elif option == "4":
 
-            print(poem)
+            result = generate_world()
 
-            save = input("Save this poem? (y/n): ")
-
-            if save.lower() == "y":
-                save_to_file(poem)
-
-        elif choice == "3":
+        elif option == "5":
 
             print("Goodbye writer.")
             break
@@ -79,11 +76,19 @@ Choose an option:
         else:
 
             print("Invalid option.")
+            continue
+
+        print(result)
+
+        save = input("Save this result? (y/n): ")
+
+        if save.lower() == "y":
+            save_to_file(result)
 
 
 def main():
 
-    show_banner()
+    banner()
     menu()
 
 
